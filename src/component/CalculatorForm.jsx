@@ -39,7 +39,32 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
       });
     },
   }));
+  const handleDecreaseElements = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      numberOfElements: Math.max(prevData.numberOfElements - 1, 1),
+    }));
+  };
 
+  const handleIncreaseElements = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      numberOfElements: prevData.numberOfElements + 1,
+    }));
+  };
+  const handleDecrease = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      numberOfPeople: Math.max(prevData.numberOfPeople - 1, 1),
+    }));
+  };
+
+  const handleIncrease = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      numberOfPeople: prevData.numberOfPeople + 1,
+    }));
+  };
   return (
     <>
       <section className="logo-cont">
@@ -81,14 +106,17 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
               <div>
                 <label className="logo-contain-2-1">
                   Number of People in the Design:
-                  <input
-                    type="number"
-                    name="numberOfPeople"
-                    value={formData.numberOfPeople}
-                    onChange={handleChange}
-                    min="1"
-                    className="input-width"
-                  />
+                  <div className="input-width">
+                    <span>{formData.numberOfPeople}</span>
+                    <div className="button-box">
+                      <button type="button" onClick={handleIncrease}>
+                        &#9650; {/* Unicode for up arrow */}
+                      </button>
+                      <button type="button" onClick={handleDecrease}>
+                        &#9660; {/* Unicode for down arrow */}
+                      </button>
+                    </div>
+                  </div>
                 </label>
 
                 <label className="logo-contain-2-1">
@@ -111,16 +139,18 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
               <div>
                 <label className="logo-contain-2-1">
                   Number of Character in the Illustration:
-                  <input
-                    type="number"
-                    name="numberOfElements"
-                    value={formData.numberOfElements}
-                    onChange={handleChange}
-                    min="1"
-                    className="input-width"
-                  />
+                  <div className="input-width">
+                    <span>{formData.numberOfElements}</span>
+                    <div className="button-box">
+                      <button type="button" onClick={handleIncreaseElements}>
+                        &#9650; {/* Unicode for up arrow */}
+                      </button>
+                      <button type="button" onClick={handleDecreaseElements}>
+                        &#9660; {/* Unicode for down arrow */}
+                      </button>
+                    </div>
+                  </div>
                 </label>
-
                 <label className="logo-contain-2-1">
                   Number of Revisions:
                   <select

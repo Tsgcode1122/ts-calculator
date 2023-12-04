@@ -13,7 +13,32 @@ const WebsiteForm = ({ onCalculate, defaultValues }) => {
     e.preventDefault();
     onCalculate(formData);
   };
+  const handleDecreaseElements = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      sections: Math.max(prevData.sections - 1, 1),
+    }));
+  };
 
+  const handleIncreaseElements = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      sections: prevData.sections + 1,
+    }));
+  };
+  const handleDecrease = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      productListings: Math.max(prevData.productListings - 1, 1),
+    }));
+  };
+
+  const handleIncrease = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      productListings: prevData.productListings + 1,
+    }));
+  };
   return (
     <section className="logo-cont">
       <form onSubmit={handleSubmit}>
@@ -35,26 +60,33 @@ const WebsiteForm = ({ onCalculate, defaultValues }) => {
           {formData.websiteType === "landing" && (
             <label className="logo-contain-2-1">
               Number of Sections:
-              <input
-                type="number"
-                name="sections"
-                value={formData.sections}
-                onChange={handleChange}
-                min="1"
-              />
+              <div className="input-width">
+                <span>{formData.sections}</span>
+                <div className="button-box">
+                  <button type="button" onClick={handleIncreaseElements}>
+                    &#9650; {/* Unicode for up arrow */}
+                  </button>
+                  <button type="button" onClick={handleDecreaseElements}>
+                    &#9660; {/* Unicode for down arrow */}
+                  </button>
+                </div>
+              </div>
             </label>
           )}
           {formData.websiteType === "ecommerce" && (
             <label className="logo-contain-2-1">
               Number of Product Listings:
-              <input
-                type="number"
-                name="productListings"
-                value={formData.productListings}
-                onChange={handleChange}
-                min="1"
-                className="input-width"
-              />
+              <div className="input-width">
+                <span>{formData.productListings}</span>
+                <div className="button-box">
+                  <button type="button" onClick={handleIncrease}>
+                    &#9650; {/* Unicode for up arrow */}
+                  </button>
+                  <button type="button" onClick={handleDecrease}>
+                    &#9660; {/* Unicode for down arrow */}
+                  </button>
+                </div>
+              </div>
             </label>
           )}
           {formData.websiteType && (
