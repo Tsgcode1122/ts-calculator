@@ -65,7 +65,7 @@ const FAQs = () => {
         <h2>Frequently Asked Questions (FAQs)</h2>
         <p>
           Here are some common questions and answers about our freelancer
-          calculator and logo design services.
+          calculator and design services.
         </p>
         <div className="faq-accord ">
           {Faqs.map((Faqs) => (

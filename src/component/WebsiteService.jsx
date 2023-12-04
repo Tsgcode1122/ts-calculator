@@ -110,9 +110,10 @@ const WebsiteService = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Website Receipt"
+          className={"model"}
         >
           <div className="modal">
-            <h3>Receipt</h3>
+            <h3>Invoice</h3>
             <h4>Website Design</h4>
             <p className="ppp">
               {" "}

@@ -166,6 +166,7 @@ const LogoService = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeReceiptModal}
           contentLabel="Receipt Modal"
+          className={"model"}
         >
           <div className="modal">
             <h3>Invoice</h3>
@@ -230,7 +231,7 @@ const LogoService = () => {
                 </ul>
               </>
             )}
-            <button onClick={closeReceiptModal}>Back</button>
+            <button onClick={closeReceiptModal}>Close</button>
           </div>
           {showThanksSection && (
             <div className="thanks-section">

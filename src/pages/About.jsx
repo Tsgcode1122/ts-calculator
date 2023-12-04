@@ -25,9 +25,8 @@ const About = () => {
             estimate the cost of your project.
           </p>
           <p>
-            This is the About page content. Feel free to explore the features
-            and benefits of our calculator to make informed decisions about your
-            project requirements.
+            Feel free to explore the features and benefits of our calculator to
+            make informed decisions about your project requirements.
           </p>
         </div>
         <div className="about-img">

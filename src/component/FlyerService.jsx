@@ -81,6 +81,7 @@ const FlyerService = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Flyer Receipt"
+          className={"model"}
         >
           <div className="modal">
             <h3>Invoice</h3>

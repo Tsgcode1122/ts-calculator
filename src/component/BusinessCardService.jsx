@@ -95,6 +95,7 @@ const BusinessCardService = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Business Card Receipt"
+          className={"model"}
         >
           <div className="modal">
             <h3>Invoice</h3>
