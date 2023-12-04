@@ -147,7 +147,7 @@ const LogoService = () => {
             <select
               onChange={(e) => handleLogoTypeChange(e.target.value)}
               style={{
-                color: formData.websiteType === "landing" ? "black" : "black",
+                color: "black",
               }}
             >
               <option value="">Select...</option>

@@ -80,8 +80,7 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     value={formData.textLogoComplexity}
                     onChange={handleChange}
                     style={{
-                      color:
-                        formData.websiteType === "landing" ? "black" : "black",
+                      color: "black",
                     }}
                   >
                     <option value="simple">Simple</option>
@@ -97,8 +96,7 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     value={formData.numberOfRevisions}
                     onChange={handleChange}
                     style={{
-                      color:
-                        formData.websiteType === "landing" ? "black" : "black",
+                      color: "black",
                     }}
                   >
                     <option value="1">1</option>
@@ -134,8 +132,7 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     value={formData.numberOfRevisions}
                     onChange={handleChange}
                     style={{
-                      color:
-                        formData.websiteType === "landing" ? "black" : "black",
+                      color: "black",
                     }}
                   >
                     <option value="1">1</option>
@@ -170,8 +167,7 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     value={formData.numberOfRevisions}
                     onChange={handleChange}
                     style={{
-                      color:
-                        formData.websiteType === "landing" ? "black" : "black",
+                      color: "black",
                     }}
                   >
                     <option value="1">1</option>

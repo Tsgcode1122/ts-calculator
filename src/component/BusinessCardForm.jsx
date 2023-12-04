@@ -1,6 +1,6 @@
 // BusinessCardForm.jsx
 import React from "react";
-import downArrow from "../images/arrowcolor.png";
+
 const BusinessCardForm = ({ onCalculate, defaultValues }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +19,13 @@ const BusinessCardForm = ({ onCalculate, defaultValues }) => {
           <div>
             <label className="logo-contain-2-1">
               Page Style:
-              <select name="pageStyle" defaultValue={defaultValues.pageStyle}>
+              <select
+                name="pageStyle"
+                defaultValue={defaultValues.pageStyle}
+                style={{
+                  color: "black",
+                }}
+              >
                 <option value="front">Front</option>
                 <option value="front-and-back">Front and Back</option>
               </select>
@@ -32,9 +38,6 @@ const BusinessCardForm = ({ onCalculate, defaultValues }) => {
                 type="checkbox"
                 name="includeQRCode"
                 defaultChecked={defaultValues.includeQRCode}
-                style={{
-                  color: formData.websiteType === "landing" ? "black" : "black",
-                }}
               />
             </label>
           </div>
@@ -45,7 +48,7 @@ const BusinessCardForm = ({ onCalculate, defaultValues }) => {
                 name="numberOfRevisions"
                 defaultValue={defaultValues.numberOfRevisions}
                 style={{
-                  color: formData.websiteType === "landing" ? "black" : "black",
+                  color: "black",
                 }}
               >
                 <option value="1">1</option>

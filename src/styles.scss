@@ -478,16 +478,13 @@ body {
 }
 // =========Faqs page==========
 
-// FAQs.scss
-
 .faq-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background: url("./images/black_dots_image.svg") no-repeat center/cover;
-  padding: 2rem 2rem 2rem 2rem;
-  margin: 0;
+  margin: 0rem;
+  padding: 2rem;
   color: $primary-color;
   h2 {
     color: white;
@@ -499,34 +496,66 @@ body {
     text-align: center;
   }
   .faq-accord {
-    .accordion {
-      max-width: 410px;
+    .Faqs-item {
+      border-radius: 10px;
+      margin-bottom: 1rem;
 
-      &__button {
-        color: white;
-        background: $linear-gradient-bright;
-        border: 1px solid white;
-        border-radius: 10px;
-        padding: 10px;
-        margin-bottom: 1rem;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        width: 500px;
+        height: 230px;
+      }
+      .Faqs-header {
+        border-radius: 0.6rem 0.6rem 0 0;
+        font-size: 1.2rem;
         cursor: pointer;
-        transition:
-          background-color 0.3s ease-in-out,
-          color 0.3s ease-in-out;
+        box-shadow: 1px 1px 6px -2px black;
+        background: $linear-gradient-bright;
+        padding: 0.2rem;
+        h4 {
+          color: $primary-color;
+          font-weight: 500;
+          padding: 0;
+          margin-top: 1rem;
+          margin-left: 1rem;
+          margin-right: 0rem;
+          margin-bottom: 1rem;
+          display: flex;
+          justify-content: space-between;
+          font-size: 16px;
+          svg {
+            color: $primary-color;
+            transition: transform 0.3s ease-in-out;
+          }
+        }
       }
 
-      &__panel {
-        background: none;
-        color: white;
-        padding: 1rem;
-        min-width: 400px;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+      .Faqs-content {
+        max-height: 0;
+        // opacity: 0;
+        transition:
+          max-height 0.3s ease-in-out,
+          opacity 0.1s ease-in-out;
+        &.open {
+          max-height: 500px;
+          // opacity: 1;
+        }
+        article {
+          color: $secondary-color;
+          font-size: 15px;
+          background: white;
+          line-height: 1.5;
+          padding: 1rem;
+          text-align: justify;
+          font-weight: normal;
+          padding-bottom: 1rem;
+          transition: transform 1.3s ease-in-out;
+        }
       }
     }
   }
 }
-
 // =========about==========
 .about-section {
   height: 90vh;
@@ -804,24 +833,63 @@ body {
     background: $light-color;
 
     color: $dark-color;
-
     h2 {
       color: $dark-color;
+      text-align: center;
     }
 
     p {
       color: $dark-color;
+      text-align: center;
     }
     .faq-accord {
-      .accordion {
-        &__button {
-          color: $dark-color;
-          background: $linear-gradient-light-spread;
+      .Faqs-item {
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        border: 1px solid $dark-color;
+        overflow: hidden;
+        img {
+          max-width: 100%;
+          width: 500px;
+          height: 230px;
+        }
+        .Faqs-header {
+          border-radius: 0.6rem 0.6rem 0 0;
+          font-size: 1.2rem;
+          cursor: pointer;
           box-shadow: 1px 1px 6px -2px black;
+          background: $linear-gradient-light-spread;
+          padding: 0.2rem;
+          h4 {
+            color: $dark-color;
+
+            svg {
+              color: $dark-color;
+            }
+          }
         }
 
-        &__panel {
-          color: $dark-color;
+        .Faqs-content {
+          max-height: 0;
+          // opacity: 0;
+          transition:
+            max-height 0.3s ease-in-out,
+            opacity 0.1s ease-in-out;
+          &.open {
+            max-height: 500px;
+            // opacity: 1;
+          }
+          article {
+            color: $secondary-color;
+            font-size: 15px;
+            background: white;
+            line-height: 1.5;
+            padding: 1rem;
+            text-align: justify;
+            font-weight: normal;
+            padding-bottom: 1rem;
+            transition: transform 1.3s ease-in-out;
+          }
         }
       }
     }
@@ -1158,23 +1226,6 @@ body {
       text-align: center;
       font-size: 1.1rem;
     }
-    .faq-accord {
-      .accordion {
-        max-width: 250px;
-        margin: 0;
-        padding: 0;
-        &__button {
-          border-radius: 10px;
-          padding: 10px;
-          margin-bottom: 1rem;
-        }
-
-        &__panel {
-          padding: 1rem;
-          min-width: 250px;
-        }
-      }
-    }
   }
 
   // =========about==========
@@ -1300,11 +1351,11 @@ body {
   // =========spin==========
 
   .spin-box {
-    top: 40%;
+    top: 45%;
     left: 22%;
   }
   .spin-box-2 {
-    bottom: -7%;
+    bottom: -12%;
     right: 26%;
   }
   // =========footer==========
@@ -1529,24 +1580,6 @@ body {
       text-align: center;
       font-size: 1.1rem;
     }
-    .faq-accord {
-      .accordion {
-        max-width: 290px;
-        margin: 0;
-        padding: 0;
-        &__button {
-          border-radius: 10px;
-          padding: 10px;
-          margin-bottom: 1rem;
-        }
-
-        &__panel {
-          padding: 1rem;
-          min-width: 290px;
-          text-align: justify;
-        }
-      }
-    }
   }
 
   // =========about==========
@@ -1667,7 +1700,7 @@ body {
     left: 22%;
   }
   .spin-box-2 {
-    bottom: 8%;
+    bottom: 2%;
     right: 26%;
   }
   // =========footer==========
@@ -1874,24 +1907,6 @@ body {
     p {
       text-align: justify;
       font-size: 1.1rem;
-    }
-    .faq-accord {
-      .accordion {
-        max-width: 310px;
-        margin: 0;
-        padding: 0;
-        &__button {
-          border-radius: 10px;
-          padding: 10px;
-          margin-bottom: 1rem;
-        }
-
-        &__panel {
-          padding: 1rem;
-          min-width: 310px;
-          text-align: justify;
-        }
-      }
     }
   }
 
