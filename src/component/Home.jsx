@@ -33,7 +33,7 @@ const Home = () => {
           <ul className="cal-item">
             <h3>Choose a Design Service to Get Started</h3>
             <img src={downArrow} className="down-arrow" />
-            <li className="tsgup hvr-curl-top-right ">
+            <li className=" hvr-curl-top-right ">
               <Link to="/logo">Logo Design</Link>
             </li>
             <li className="hvr-curl-top-left">
