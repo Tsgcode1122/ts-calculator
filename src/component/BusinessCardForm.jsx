@@ -32,6 +32,9 @@ const BusinessCardForm = ({ onCalculate, defaultValues }) => {
                 type="checkbox"
                 name="includeQRCode"
                 defaultChecked={defaultValues.includeQRCode}
+                style={{
+                  color: formData.websiteType === "landing" ? "black" : "black",
+                }}
               />
             </label>
           </div>
@@ -41,6 +44,9 @@ const BusinessCardForm = ({ onCalculate, defaultValues }) => {
               <select
                 name="numberOfRevisions"
                 defaultValue={defaultValues.numberOfRevisions}
+                style={{
+                  color: formData.websiteType === "landing" ? "black" : "black",
+                }}
               >
                 <option value="1">1</option>
                 <option value="2">2</option>

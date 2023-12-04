@@ -49,6 +49,9 @@ const WebsiteForm = ({ onCalculate, defaultValues }) => {
               name="websiteType"
               value={formData.websiteType}
               onChange={handleChange}
+              style={{
+                color: formData.websiteType === "landing" ? "black" : "black",
+              }}
             >
               <option value="">Select...</option>
               <option value="landing">Landing Page Website</option>
@@ -96,6 +99,9 @@ const WebsiteForm = ({ onCalculate, defaultValues }) => {
                 name="numberOfRevisions"
                 value={formData.numberOfRevisions}
                 onChange={handleChange}
+                style={{
+                  color: formData.websiteType === "landing" ? "black" : "black",
+                }}
               >
                 <option value="1">1 Revision</option>
                 <option value="2">2 Revisions</option>

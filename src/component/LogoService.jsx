@@ -144,7 +144,12 @@ const LogoService = () => {
           <img src={downArrow} className="down-arrow" />
           <label className="logo-contain-1">
             Select Logo Type:
-            <select onChange={(e) => handleLogoTypeChange(e.target.value)}>
+            <select
+              onChange={(e) => handleLogoTypeChange(e.target.value)}
+              style={{
+                color: formData.websiteType === "landing" ? "black" : "black",
+              }}
+            >
               <option value="">Select...</option>
               <option value="text">Text-based Logo</option>
               <option value="cartoon">Cartoon-based Logo</option>

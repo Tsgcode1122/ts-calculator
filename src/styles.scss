@@ -331,6 +331,7 @@ body {
     .logo-contain-2-1 {
       margin: 0.3rem 0;
       padding: 1rem;
+
       border-radius: 1.3rem;
       font-size: 1rem;
       display: flex;
@@ -367,6 +368,7 @@ body {
     max-width: 40px;
   }
 }
+
 .modal {
   background: $secondary-color; // Set your desired background color
   padding: 20px;
@@ -560,10 +562,13 @@ body {
   .button-box {
     margin: 0;
     padding: 0;
+
     display: flex;
     flex-direction: column;
+    gap: 9px;
     button {
       background: none;
+      color: black !important;
       border: none;
       font-size: 10px;
     }
@@ -1040,7 +1045,7 @@ body {
       padding: 1rem;
 
       .logo-contain-2-1 {
-        margin: 0 0 0;
+        margin: 1rem 0 0;
         padding: 1rem;
 
         font-size: 1rem;
@@ -1224,12 +1229,13 @@ body {
     .Menu-button {
       .nav-link {
         float: left;
-        padding: 14px 5px;
+        padding: 14px 10px;
       }
     }
     // =========mode icon==========
     .dark-mode-button {
       font-size: 1rem;
+      padding-right: 0rem;
       justify-content: center;
       margin-top: 0.8rem;
       text-align: center;
@@ -1406,11 +1412,11 @@ body {
     // padding-top: 4rem;
     color: $primary-color;
     .logo-contain-2 {
-      margin: 1rem 0 0 0;
+      margin: 1rem 0 0;
       padding: 1rem;
 
       .logo-contain-2-1 {
-        margin: 0 0 0;
+        margin: 1rem 0 0;
         padding: 1rem;
 
         font-size: 1rem;
@@ -1586,12 +1592,13 @@ body {
       .nav-link {
         font-size: 1.1rem;
         float: left;
-        padding: 14px 7px;
+        padding: 14px 12px;
       }
     }
     // =========mode icon==========
     .dark-mode-button {
       font-size: 1.1rem;
+      padding-right: 0;
       justify-content: center;
       margin-top: 0.8rem;
       text-align: center;
@@ -1751,7 +1758,7 @@ body {
       padding: 1rem;
 
       .logo-contain-2-1 {
-        margin: 0 0 0;
+        margin: 1rem 0 0;
         padding: 1rem;
 
         font-size: 1rem;

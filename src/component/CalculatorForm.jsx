@@ -79,6 +79,10 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     name="textLogoComplexity"
                     value={formData.textLogoComplexity}
                     onChange={handleChange}
+                    style={{
+                      color:
+                        formData.websiteType === "landing" ? "black" : "black",
+                    }}
                   >
                     <option value="simple">Simple</option>
                     <option value="moderate">Moderate</option>
@@ -92,6 +96,10 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     name="numberOfRevisions"
                     value={formData.numberOfRevisions}
                     onChange={handleChange}
+                    style={{
+                      color:
+                        formData.websiteType === "landing" ? "black" : "black",
+                    }}
                   >
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -125,6 +133,10 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     name="numberOfRevisions"
                     value={formData.numberOfRevisions}
                     onChange={handleChange}
+                    style={{
+                      color:
+                        formData.websiteType === "landing" ? "black" : "black",
+                    }}
                   >
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -157,6 +169,10 @@ const CalculatorForm = forwardRef(({ onCalculate, logoType }, ref) => {
                     name="numberOfRevisions"
                     value={formData.numberOfRevisions}
                     onChange={handleChange}
+                    style={{
+                      color:
+                        formData.websiteType === "landing" ? "black" : "black",
+                    }}
                   >
                     <option value="1">1</option>
                     <option value="2">2</option>

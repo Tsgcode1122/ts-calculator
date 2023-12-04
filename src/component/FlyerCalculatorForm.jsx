@@ -63,6 +63,9 @@ const FlyerCalculatorForm = ({ onCalculate }) => {
               name="numberOfRevisions"
               value={formData.numberOfRevisions}
               onChange={handleChange}
+              style={{
+                color: formData.websiteType === "landing" ? "black" : "black",
+              }}
             >
               <option value="1">1</option>
               <option value="2">2</option>
