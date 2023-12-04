@@ -42,7 +42,7 @@ const Home = () => {
             <li className="hvr-curl-bottom-right">
               <Link to="/flyer">Flyer Design</Link>
             </li>
-            <li className=" hvr-curl-bottom-left tsgup">
+            <li className=" hvr-curl-bottom-left ">
               <Link to="/website">Website Design</Link>
             </li>
           </ul>
