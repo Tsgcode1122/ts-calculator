@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles.scss";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
-import useLeftToRightSwipe from "../animation/useLeftToRightSwipe";
+import useZoomInAnimation from "../animation/useZoomInAnimation";
 import Footer from "./Footer";
 const FAQs = () => {
-  useLeftToRightSwipe(".accord-ani");
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  useZoomInAnimation(".faq-container");
   const Faqs = [
     {
       id: 1,

@@ -14,11 +14,14 @@ const Home = () => {
   useMoveUpDown(".down-arrow");
   useBottomToTopSwipe(".tsgup");
   useBottomToTopSwipe(".bounce-in");
-  const { isDarkMode, toggleDarkMode } = useDarkMode(); // Use the useDarkMode hook to get the dark mode status
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   useEffect(() => {
     document.body.classList.toggle("dark-mode", isDarkMode);
   }, [isDarkMode]);
-
+  useEffect(() => {
+    // Scroll to the top on component mount
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <div className={`home-container ${isDarkMode ? "dark-mode" : ""}`}>

@@ -1,11 +1,15 @@
 // About.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import blackabout from "../images/blackabout.jpg";
 import whiteabout from "../images/whiteabout.jpg";
 import useZoomInAnimation from "../animation/useZoomInAnimation";
 import Footer from "../component/Footer";
 
 const About = () => {
+  useEffect(() => {
+    // Scroll to the top on component mount
+    window.scrollTo(0, 0);
+  });
   useZoomInAnimation(".about-context");
   useZoomInAnimation(".about-show");
   useZoomInAnimation(".about-hide");

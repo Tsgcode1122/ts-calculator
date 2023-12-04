@@ -1280,13 +1280,14 @@ body {
     .Menu-button {
       .nav-link {
         float: left;
-        padding: 14px 10px;
+        padding: 14px 8px;
       }
     }
     // =========mode icon==========
     .dark-mode-button {
       font-size: 1rem;
       padding-right: 0rem;
+      padding-left: 0.5rem;
       justify-content: center;
       margin-top: 0.8rem;
       text-align: center;
@@ -1625,13 +1626,14 @@ body {
       .nav-link {
         font-size: 1.1rem;
         float: left;
-        padding: 14px 12px;
+        padding: 14px 10px;
       }
     }
     // =========mode icon==========
     .dark-mode-button {
       font-size: 1.1rem;
       padding-right: 0;
+      padding-left: 0.5rem;
       justify-content: center;
       margin-top: 0.8rem;
       text-align: center;
