@@ -8,7 +8,7 @@ import FlyerService from "./component/FlyerService";
 import BusinessCardService from "./component/BusinessCardService";
 import WebsiteService from "./component/WebsiteService";
 
-import FAQs from "./component/FAQs"; // Import the FAQs component
+import FAQs from "./component/FAQs";
 
 import About from "./pages/About";
 import { DarkModeProvider } from "./component/ DarkModeContext";

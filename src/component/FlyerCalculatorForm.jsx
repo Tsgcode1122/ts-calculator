@@ -11,7 +11,6 @@ const FlyerCalculatorForm = ({ onCalculate }) => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
 
-    // For checkboxes, use the checked value; for other inputs, use the value
     const inputValue = type === "checkbox" ? checked : value;
 
     setFormData({
